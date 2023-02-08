@@ -3,8 +3,7 @@ import org.openqa.selenium.WebDriver;
 
 
 public class BaseClass {
-    WebDriver driver;
-
+    protected WebDriver driver;
     public BaseClass(WebDriver driver){
         this.driver = driver;
     }
@@ -19,15 +18,6 @@ public class BaseClass {
 
     public void clickElement(By locator){
         driver.findElement(locator).click();
-    }
-
-    public Boolean isDisplayed(By locator){
-
-        try{
-            return driver.findElement(locator).isDisplayed();
-        } catch (org.openqa.selenium.NoSuchElementException e){
-            return false;
-        }
     }
 
 }

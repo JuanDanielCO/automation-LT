@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 public class TestCases {
     String driverPath = ".\\src\\main\\resources\\drivers\\chromedriver.exe";
     WebDriver driver;
-
     LoginPage objLoginPage;
     HomePage objHomePage;
     CartPage objCartPage;
