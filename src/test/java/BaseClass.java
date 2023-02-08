@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 
 
 public class BaseClass {
-    private WebDriver driver;
+    WebDriver driver;
 
     public BaseClass(WebDriver driver){
         this.driver = driver;
@@ -22,6 +22,7 @@ public class BaseClass {
     }
 
     public Boolean isDisplayed(By locator){
+
         try{
             return driver.findElement(locator).isDisplayed();
         } catch (org.openqa.selenium.NoSuchElementException e){

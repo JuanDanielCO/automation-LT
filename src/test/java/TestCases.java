@@ -26,7 +26,8 @@ public class TestCases {
     @Test(priority = 1)
     public void login_to_sauceDemo_webPage(){
         objLoginPage = new LoginPage(driver);
-        objLoginPage.loginUser();
+        objLoginPage.enterCredentials();
+        objLoginPage.clickOnLoginButton();
     }
 
     @Test(priority = 2)
@@ -47,6 +48,7 @@ public class TestCases {
     public void get_to_firstCheckOutPage_sauceDemo_webPage() {
         objCheckOutFirstPage = new CheckOutFirstPage(driver);
         objCheckOutFirstPage.fillFormCheckOut();
+        objCheckOutFirstPage.continueWithOrder();
     }
 
     @Test(priority = 5)
